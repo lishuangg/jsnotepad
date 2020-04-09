@@ -28,7 +28,7 @@ module.exports = function (grunt) {
             'dist/dlg-search/dlg-search.js':'./dlg-search/dlg-search.js',
             'dist/dlg-replace/dlg-replace.js':'./dlg-replace/dlg-replace.js',
             'dist/menu-bar/menu-bar.js':'./menu-bar/menu-bar.js',
-            'dist/menu-data/menu-data.js':'./menu-data/menu-data.js',
+            'dist/menu-bar/menu-data.js':'./menu-bar/menu-data.js',
         }
       }         
     }
