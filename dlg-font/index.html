@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体-测试</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../font-list/font-list.css">
+    <link rel="stylesheet" href="./dlg-font.css">
+</head>
+<body>
+    <input type="button" id="popup" value="弹出对话框" autofocus>
+    <hr>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../font-list/font-list.js"></script>
+<script src="./dlg-font.js"></script>
+<script>
+    $(function(){
+        var $btnDlg = $('#popup');
+        $btnDlg.click(function(){
+            $dlgFont.show({
+                onClick:function(){
+                    alert('就知道你会同意的！')
+                }
+            })
+        })
+    })
+</script>
+</html>

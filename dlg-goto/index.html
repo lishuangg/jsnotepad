@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转到-测试</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="./dlg-goto.css">
+</head>
+<body>
+    <input type="button" id="popup" value="弹出对话框">
+    <hr>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./dlg-goto.js"></script>
+<script>
+    $(function(){
+        var $btnDlg = $('#popup');
+        $btnDlg.click(function(){
+            $dlgGoto.show({
+                onClick:function(){
+                    alert('就知道你会同意的！')
+                }
+            })
+        })
+    })
+</script>
+</html>

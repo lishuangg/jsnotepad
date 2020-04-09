@@ -1,0 +1,44 @@
+.notepad-dlg-search .dialogbox {
+    height: 180px;
+    width: 420px;
+}
+.notepad-dlg-search .notepad-dlg-main {
+    height: 150px;
+    padding: 5px;
+}
+.notepad-dlg-search .notepad-dlg-main .text-content {
+    box-sizing: border-box;
+    height: 26px;
+    margin: 10px;
+    width: 200px;
+}
+.notepad-dlg-search .notepad-dlg-main .btn-search {
+    position: absolute;
+    right: 8px;
+    top: 14px;
+}
+.notepad-dlg-search .notepad-dlg-main .btn-cancel {
+    position: absolute;
+    right: 8px;
+    top: 50px;
+}
+.notepad-dlg-search .notepad-dlg-main .search-direction {
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    width: 140px;
+    height: 50px;
+    position: absolute;
+    top: 65px;
+    left: 170px;
+    padding: 10px 5px;
+    font-size:0.6em;
+}
+.notepad-dlg-search .notepad-dlg-main .down {
+    margin-left: 5px;
+}
+.notepad-dlg-search .notepad-dlg-main .capital {
+    margin-top: 40px;
+}
+.notepad-dlg-search .notepad-dlg-main .loop {
+    margin-top: 10px;
+}

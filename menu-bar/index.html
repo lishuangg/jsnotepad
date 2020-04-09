@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>菜单栏布局和测试页面</title>
+  <link rel="stylesheet" href="./menu-bar.css">
+</head>
+<body>
+    <div id="main"></div>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./menu-data.js"></script>
+<script src="./menu-bar.js"></script>
+<script>
+    $(function() {
+        var menu = new Menu();
+        menu.show({
+            container:'#main',
+        })
+    });
+</script>
+</body>
+</html>

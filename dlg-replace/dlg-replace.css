@@ -1,0 +1,45 @@
+.notepad-dlg-replace .dialogbox {
+    height:230px;
+    width:410px;
+}
+.notepad-dlg-replace .notepad-dlg-main {
+    height: 200px;
+}
+.notepad-dlg-replace .notepad-dlg-main .text-search {
+    box-sizing: border-box;
+    height: 26px;
+    margin: 10px;
+    width: 198px;
+}
+.notepad-dlg-replace .notepad-dlg-main .text-replace {
+    box-sizing: border-box;
+    height: 26px;
+    margin-left: 25px;
+    width: 198px;
+}
+.notepad-dlg-replace .notepad-dlg-main .btn-search {
+    bottom: 156px;
+    position: absolute;
+    right: 12px;
+}
+.notepad-dlg-replace .notepad-dlg-main .btn-replace {
+    bottom: 118px;
+    position: absolute;
+    right: 12px;
+}
+.notepad-dlg-replace .notepad-dlg-main .btn-replace-all {
+    bottom: 82px;
+    position: absolute;
+    right: 12px;
+}
+.notepad-dlg-replace .notepad-dlg-main .btn-cancel {
+    bottom: 46px;
+    position: absolute;
+    right: 12px;
+}
+.notepad-dlg-replace .notepad-dlg-main .capital {
+    margin-top: 60px;
+}
+.notepad-dlg-replace .notepad-dlg-main .loop {
+    margin-top: 10px;
+}
