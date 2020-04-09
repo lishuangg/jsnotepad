@@ -1,5 +1,5 @@
 var $menubar = (function(){
-    var $bar = $('<div class="notepad-menubar"></div>'); 
+    var $menub = $('<div class="notepad-menu-bar"></div>'); 
     var menuData;//所有菜单数据
     var menuBox;//容器
     var id;
@@ -8,26 +8,24 @@ var $menubar = (function(){
     function show(data,box){
         menuData = data;
         menuBox = box;
-        console.log(menuData);
         init();
     }
     //构建菜单栏DOM结构
     function init() {
-        $(menuBox).append($bar);
+        $(menuBox).append($menub);
         //创建菜单栏
-        var $titles = $('<ul class="menu-title"></ul>');
-        $bar.append($titles);
-        console.log(menuData.length)
+        var $menuFrist = $('<ul class="menu-frist"></ul>');
+        $menub.append($menuFrist);
 
         for(var i=0; i<menuData.length; i++) {
             //创建菜单栏
             var $title = $('<li class="title">'+menuData[i].title+'</li>'); 
             $title.attr('data-id', i);
-            $titles.append($title);
+            $menuFrist.append($title);
             //创建二级菜单
-            var $menus = $('<ul class="menus"></ul>');
-            $title.append($menus);
-            $menus.css({
+            var $menuSecond = $('<ul class="menu-second"></ul>');
+            $title.append($menuSecond);
+            $menuSecond.css({
                 width: menuData[i].width,
                 left: menuData[i].left,
                 display: 'none'
@@ -37,7 +35,7 @@ var $menubar = (function(){
             for(var j=0; j<items.length; j++) {
                 if(items[j].title === 'hr') {
                   var $hr = $('<li class="menu-hr"></li>');
-                  $menus.append($hr);
+                  $menuSecond.append($hr);
                   continue;
                 }
                 //二级菜单
@@ -52,7 +50,7 @@ var $menubar = (function(){
                 //按钮禁用         
                 if(!items[j].enabled) $menu.addClass('disabled');
                 //添加二级菜单标题
-                $menus.append($menu);
+                $menuSecond.append($menu);
             }
         }
         titleClick();
@@ -78,7 +76,6 @@ var $menubar = (function(){
                     id = i;
                 }    
             }
-            // $(this).children().css({ display: 'inline-block' });
             $(this).siblings().children().css({ display: 'none' });
             e.stopPropagation();
         });
@@ -94,33 +91,7 @@ var $menubar = (function(){
             menuData[i].menuItems[j].handler();
         });
     }
-    //设置菜单项是否为勾选状态
-    //isEnabled true 为勾选，false 为取消勾选
-    function checked(row, col, isChecked) {
-        var menuItem = $('.title').eq(row).children('ul').find('.menu-item')[col];
-
-        if(isChecked) {
-            $(menuItem).prepend($('<span class="checked">✓</span>')[0]);
-        } else {
-            $(menuItem).find('.checked').remove();
-        }
-    }
-
-    //设置菜单项为启用或禁用状态
-    //isEnabled true 为启用，false 为禁用
-    function enabled(row, col, isEnabled) {
-        var menuItem = $('.title').eq(row).children('ul').find('.menu-item')[col];
-
-        if(isEnabled) {
-            $(menuItem).removeClass('disabled');
-        } else {
-            $(menuItem).addClass('disabled');
-        }
-    }
-    
     return({
-        show:show,
-        checked:checked,
-        enabled:enabled
+        show:show
     })
 })()

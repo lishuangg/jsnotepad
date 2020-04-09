@@ -1,4 +1,8 @@
-.notepad-menubar {
+*{
+    padding:0;
+    margin:0;
+}
+.notepad-menu-bar {
     background-color: white;
     left: 0;
     position: fixed;
@@ -7,12 +11,6 @@
     user-select: none;
     z-index: 5;
 }
-
-.menu-title {
-    margin: 0;
-    padding: 0;
-}
-
 .title {
     border: 1px solid white;
     box-sizing: border-box;
@@ -24,14 +22,12 @@
     text-align: center;
     width: 60px;
 }
-
 .title:hover {
     box-sizing: border-box;
     background-color: #cce8ff;
     border: 1px solid #99d1ff;
 }
-
-.menus {
+.menu-second {
     background-color: #f2f2f2;
     box-shadow: 5px 5px 5px #a6a6a6;
     display: inline-block;
@@ -42,7 +38,6 @@
     top: 20px;
     width: 202px;
 }
-
 .menu-item {
     display: block;
     height: 22px;
@@ -53,25 +48,20 @@
     padding-left: 34px;
     position: relative; 
 }
-
 .menu-item:hover {
     background-color: #99d1ff;
     height: 22px;
 }
-
 .shortcut {
     position: absolute;
     right: 20px;
 }
-
 .disabled {
     color: #6d6d6d;
 }
-
 .disabled:hover {
     background-color: #e6e6e6;
 }
-
 .menu-hr {
     border: 1px solid #d7d7d7;
     display: block;
@@ -79,7 +69,6 @@
     margin: 4px;
     margin-left: 34px;
 }
-
 .checked {
     position: absolute;
     width: 22px;

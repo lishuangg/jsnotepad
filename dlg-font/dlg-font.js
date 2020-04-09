@@ -4,7 +4,7 @@ var $dlgFont = (function(){
             +'<div class="notepad-dlg notepad-dlg-font">'
             +'     <div class="dialogbox">'
             +'        <div class="notepad-dlg-titlebar">'
-            +'            <p class="title">字体</p>'
+            +'            <p class="font-title">字体</p>'
             +'            <span class="close-btn">x</span>'
             +'        </div>'
             +'        <div class="notepad-dlg-main">'
@@ -38,6 +38,7 @@ var $dlgFont = (function(){
             onClick:null
         };
     var $example = $dlg.find('#example>p');
+    var font;
     var fonts = ['宋体','黑体','微软雅黑','仿宋','楷体','隶书','幼圆','华文楷体','华文宋体','方正舒体','方正姚体','Agency FB', 'Algerian', 'Arial', 'Arial Rounded MT', 'Axure Handwriting', 'Bahnschrift', 'Baskerville Old Face', 'Bauhaus 93', 'Bell MT', 'Berlin Sans FB', 'Bernard MT', 'BlackAdder ITC'];
     var styles = ['常规', '斜体', '粗体', '粗偏斜体'];
     var sizes = ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '26', '28', '36', '48', '72'];
@@ -101,7 +102,25 @@ var $dlgFont = (function(){
     function show(conf){
         $(cfg.container).append($dlg);
         $.extend(cfg,conf);
+        $('.dialogbox').draggable({ handle: ".notepad-dlg-titlebar" });
+        $('.close-btn').click(function(){
+          $dlg.remove();
+        });
+        $('.btn-sure').click(function(){
+          font = {
+            family: cfg.family,
+            style: cfg.style,
+            size: cfg.size
+          };
+          cfg.onClick(font);
+          $dlg.remove();
+        });
+        $('.btn-cancel').click(function(){
+            $dlg.remove();
+        });
+
         init();
+        return font;
     }
     return {
         show:show

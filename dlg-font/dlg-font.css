@@ -7,6 +7,12 @@
     height: 470px;
     position: relative;
 }
+.notepad-dlg-titlebar .font-title {
+    position: absolute;
+    left: 10px;
+    line-height: 30px;
+    margin:0;
+}
 .notepad-dlg-font .notepad-dlg-main>div>p{
     padding:0;
     margin:0;

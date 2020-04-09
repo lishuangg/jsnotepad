@@ -1,3 +1,8 @@
+var font = {
+  family: 'Arial',
+  style: '常规',
+  size: '16'
+}; 
 var menuData = [
     { 
       title: '文件(F)',
@@ -25,35 +30,17 @@ var menuData = [
         {title: '粘贴(P)',shortcut: 'Ctrl+V',enabled: false,handler: function() { console.log('粘贴(P) menu clicked!'); }},
         {title: '删除(L)',shortcut: 'Del',enabled: false,handler: function() { console.log('删除(L) menu clicked!'); }},
         {title: 'hr',shortcut: '',enabled: true,handler: null},
-        {title: '使用 Bing 搜索...',shortcut: 'Ctrl+E',enabled: true,handler: function() {}},
-        {title: '查找(F)...',shortcut: 'Ctrl+F',enabled: false,handler: function() {
-            $dlgSearch.show({
-                onClick:function(){
-                    alert('查找')
-                }
-            })
-        }},
+        {title: '使用 Bing 搜索...',shortcut: 'Ctrl+E',enabled: true,handler: function() { console.log('使用 Bing 搜索... menu clicked!'); }},
+        {title: '查找(F)...',shortcut: 'Ctrl+F',enabled: false,handler: function() { console.log('查找(F)... menu clicked!'); }},
         {title: '查找下一个(N)',shortcut: 'F3',enabled: false,handler: function() { console.log('查找下一个(N) menu clicked!'); }},
-        {title: '替换(R)...',shortcut: 'Ctrl+H',enabled: true,handler: function() {
-            $dlgReplace.show({
-                onClick:function(){
-                    alert('替换')
-                }
-            })
-        }},
-        {title: '转到(G)...',shortcut: 'Ctrl+G',enabled: true,handler: function() {
-            $dlgGoto.show({
-                onClick:function(){
-                    alert('转到')
-                }
-            })
-        }},
+        {title: '替换(R)...',shortcut: 'Ctrl+H',enabled: true,handler: function() { console.log('替换(R)... menu clicked!'); }},
+        {title: '转到(G)...',shortcut: 'Ctrl+G',enabled: true,handler: function() { console.log('转到(G)... menu clicked!'); }},
         {title: 'hr',shortcut: '',enabled: true,handler: null},
         {title: '全选(A)',shortcut: 'Ctrl+A',enabled: true,handler: function() { $editor.selectAll(); }},
         {title: '时间/日期(D)',shortcut: 'F5',enabled: true,handler: function() { $editor.insertDataTime(); }},
       ],
       width: '218px',
-      left: '52px'
+      left: '60px'
     },
     { 
       title: '格式(O)',
@@ -61,14 +48,14 @@ var menuData = [
         {title: '自动换行(W)',shortcut: '',enabled: true,handler: function() {}},
         {title: '字体(F)...',shortcut: '',enabled: true,handler: function() {
             $dlgFont.show({
-                onClick:function(){
-                    alert('字体')
+                onClick:function(e){
+                    $editor.setFont(e);
                 }
             })
         }}
       ],
       width: '156px',
-      left: '106px'
+      left: '120px'
     },
     { 
       title: '查看(V)',
@@ -76,7 +63,7 @@ var menuData = [
         {title: '状态栏(S)',shortcut: '',enabled: true,handler: function() {}}
       ],
       width: '138px',
-      left: '162px'
+      left: '180px'
     },
     { 
       title: '帮助(H)',
@@ -85,6 +72,6 @@ var menuData = [
         {title: '关于记事本(A)',shortcut: '',enabled: true,handler: function() {}},
       ],
       width: '166px',
-      left: '216px'
+      left: '240px'
     }
   ];
