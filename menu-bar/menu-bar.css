@@ -1,51 +1,91 @@
-*{
-    padding:0;
-    margin:0
-}
-.menu-box{
+.notepad-menubar {
+    background-color: white;
+    left: 0;
     position: fixed;
-    top:0px;
-    margin:0;
-    padding:0;
+    right: 0;
+    top: 0;
+    user-select: none;
+    z-index: 5;
 }
-.menu-name{
-    position: relative;
+
+.menu-title {
+    margin: 0;
+    padding: 0;
 }
-.menu-title{
-    float: left;
-    width:70px;
-    height:20px;
+
+.title {
+    border: 1px solid white;
+    box-sizing: border-box;
+    cursor: default;
+    display: inline-block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 24px;
     text-align: center;
-    list-style: none;
+    width: 60px;
 }
-.menu-context{
-    display: none;
+
+.title:hover {
+    box-sizing: border-box;
+    background-color: #cce8ff;
+    border: 1px solid #99d1ff;
+}
+
+.menus {
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 5px #a6a6a6;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0;
+    padding: 2px;
     position: absolute;
-    top:22px;
-    width:200px;
-    font-size: 16px;
-    border: 1px solid black;
-    box-shadow: 10px 10px 10px #d6d6d6;
+    top: 20px;
+    width: 202px;
 }
-.menu-item{
-    width:200px;
-    list-style: none;
-    height:30px;
+
+.menu-item {
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    margin-left: 2px;
+    margin-right: 1px;
+    text-align: left;
+    padding-left: 34px;
+    position: relative; 
 }
-.menu-item hr{
-    border-top:1px solid black;
-    border-bottom:none;
-    width:100%;
+
+.menu-item:hover {
+    background-color: #99d1ff;
+    height: 22px;
 }
-.menu-item-left{
-    float:left;
-    width:120px;
-    margin-left:10px;
-    line-height: 30px;
+
+.shortcut {
+    position: absolute;
+    right: 20px;
 }
-.menu-item-right{
-    float:right;
-    width:50px;
-    line-height: 30px;
-    margin-right:10px;
+
+.disabled {
+    color: #6d6d6d;
+}
+
+.disabled:hover {
+    background-color: #e6e6e6;
+}
+
+.menu-hr {
+    border: 1px solid #d7d7d7;
+    display: block;
+    height: 0;
+    margin: 4px;
+    margin-left: 34px;
+}
+
+.checked {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 0;
+    line-height: 22px;
+    text-align: center;
+    background-color: #90c8f6;
 }
